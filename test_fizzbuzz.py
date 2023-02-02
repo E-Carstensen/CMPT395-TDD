@@ -16,3 +16,11 @@ def test_whenGivenNonMultipleOfThreeOrFive_shouldOutputNumber():
 
 def test_whenGivenNonInteger_shouldReturnFalse():
     assert fizzbuzz("a") == False
+
+def test_whenGivenString_shouldConvertToIntIfNumeric():
+    assert fizzbuzz("15") == "FizzBuzz"
+
+def test_whenGivenIncorrectDataType_shouldReturnFalse():
+    assert fizzbuzz([3, 5, 15]) == False
+
+
