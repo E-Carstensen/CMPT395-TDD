@@ -1,5 +1,14 @@
 
+'''
+Takes a potential password as a string and validates it against these criteria:
+    Must be atleast 8 Chars long
+    Must contain atleast 1 capital letter
+    Must contain atleast 2 numbers
+    Must contain atleast 1 special character
 
+
+
+'''
 
 def validate(pswd):
 
@@ -11,7 +20,7 @@ def validate(pswd):
     if len(pswd) < 8:
         output += "Password must be at least 8 characters\n"
     
-    nums = 0
+    nums = 0 
     caps = 0
     special = 0
 
@@ -20,7 +29,7 @@ def validate(pswd):
         if char.isnumeric():
             nums += 1
 
-        elif char in '!@#$%^&*().,[]-=_+':
+        elif char in '!@#$%^&*().,[]-=_+`~':
             special += 1
 
         elif char.isupper():
@@ -35,6 +44,7 @@ def validate(pswd):
     if special == 0:
         output += "password must contain at least one special character\n"
 
-
+    if len(output) == 0:
+        return True
     
     return output
