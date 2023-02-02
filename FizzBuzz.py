@@ -2,9 +2,10 @@
 
 def fizzbuzz(i):
     
-    if not isinstance(i, int):
+    if not str(i).isnumeric():
         return False
 
+    i=int(i)
     output = ""
 
     if i % 3 == 0:
@@ -14,7 +15,7 @@ def fizzbuzz(i):
         output = output + "Buzz"
 
     if len(output) == 0:
-        output = output + str(i)
+        output = str(i)
 
     return output
 
