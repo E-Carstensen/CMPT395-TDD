@@ -1,6 +1,9 @@
 
 
 def fizzbuzz(i):
+    
+    if not isinstance(i, int):
+        return False
 
     output = ""
 

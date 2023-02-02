@@ -1,16 +1,18 @@
 
 from FizzBuzz import fizzbuzz
+import pytest
 
-
-def whenGivenMultipleOfThree_shouldOutputFizz():
+def test_whenGivenMultipleOfThree_shouldOutputFizz():
     assert fizzbuzz(3) == "Fizz"
 
-def whenGivenMultipleOfThree_shouldOutputBuzz():
+def test_whenGivenMultipleOfThree_shouldOutputBuzz():
     assert fizzbuzz(5) == "Buzz"
 
-def whenGivenMultipleOfThreeAndFize_shouldOutputFizzBuzz():
+def test_whenGivenMultipleOfThreeAndFize_shouldOutputFizzBuzz():
     assert fizzbuzz(15) == "FizzBuzz"
 
-def whenGivenNonMultipleOfThreeOrFive_shouldOutputNumber():
+def test_whenGivenNonMultipleOfThreeOrFive_shouldOutputNumber():
     assert fizzbuzz(1) == "1"
 
+def test_whenGivenNonInteger_shouldReturnFalse():
+    assert fizzbuzz("a") == False
