@@ -1,5 +1,5 @@
 
-'''
+''' Eric Carstensen - 3070801 - CMPT395 TDD Password Validation
 Takes a potential password as a string and validates it against these criteria:
 
     Must be atleast 8 Chars long

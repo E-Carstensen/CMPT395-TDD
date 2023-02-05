@@ -1,4 +1,4 @@
-''' Eric Carstensen - 3070801
+''' Eric Carstensen - 3070801 - CMPT395 TDD Fizzbuzz
 Takes an integer or a string numeric
 returns "Fizz" if input is divisable by 3
         "Buzz" if input is divisable by 5
